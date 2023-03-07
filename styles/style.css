@@ -20,10 +20,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    max-width: 936px;
-    min-width: 936px;
+    width: 100%;
     height: 100%;
+    /* max-width: 936px;
+    min-width: 936px; */
+    /* adding max/min widths to parent containers restricts how responsive it can be.*/
 }
 
 div.logo {
@@ -80,18 +81,19 @@ main {
     align-items: center;
     flex-direction: column;
     padding-top: 100px;
+    padding: 100px 40px;
 }
 
 
 main .container-1 {
     height: 359px;
-    width: 936px;
+    width: 100%;
     border: 3px #1F8B8E solid;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    /* gap: 100px; */
 }
 
 
@@ -105,7 +107,9 @@ main .container-1 h1 {
 
 
 main .container-1 img {
-    width: 50%;
+    /* width: 50%;
+    height: 100%; */
+    width: auto;
     height: 100%;
 }
 
@@ -114,8 +118,8 @@ main .container-1 img {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 936px;
-    max-width: 936px;
+    /* min-width: 936px;
+    max-width: 936px; */
     padding-top: 50px;
     gap: 20px;
 }
@@ -320,10 +324,12 @@ footer {
 
 .wrap-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items:center;
-    max-width: 936px;
-    min-width: 936px;
+    /* max-width: 936px;
+    min-width: 936px; */
+    padding: 0 40px;
+    width: 100%;
     height: 100%;
 }
 
@@ -335,7 +341,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     margin: 0;
-    margin-left: 14rem;
+    /* margin-left: 14rem; */
     /* margin-left: 4rem; */
     background-color: #218386;
     color: white;
@@ -392,10 +398,12 @@ footer {
     div.logo {
         display: none;
     }
-
+    main {
+        padding: 100px 0 0;
+    }
     main .container-1 {
         height: 259px;
-        width: 600px;
+        width: 100%;
         gap: 50px;
     }
 
@@ -407,12 +415,12 @@ footer {
     .boxes {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        min-width: 600px;
-        max-width: 600px;
+        justify-content: center;
+        /* min-width: 600px;
+        max-width: 600px; */
         padding-top: 50px;
         padding-bottom: 100px;
-        /* gap: 40px; */
+        gap: 40px;
     }
 
     .boxes h2 {
@@ -430,7 +438,12 @@ footer {
         padding-bottom: 100px;
         gap: 50px;
     }
-
+    .box-1, .box-2, .box-3, .box-4 {
+        flex: 0 0 400px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
    .box-3 {
     margin-bottom: 100px;
    
